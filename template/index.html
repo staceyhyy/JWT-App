@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <div class="login">
+        <h2>Enter username - password</h2>
+        <form id="login" method="post" action="/token">
+            {{if .Error}}
+            <p class="text-danger" style="color:red;"> {{.Error}} </p>
+            {{end}}
+
+            <label><b>User name</b></label>
+            <input type="text" name="username" id="username" placeholder="username">
+            <br><br>
+            <label><b>Password</b></label>
+            <input type="password" name="password" id="password" placeholder="password">
+            <br><br>
+            <input type="submit" name="submit" id="submit" value="submit">
+            <br> <br>
+
+        </form>
+    </div>
+</body>
+
+</html>
